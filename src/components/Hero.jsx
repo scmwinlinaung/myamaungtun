@@ -143,7 +143,7 @@ const Hero = () => {
             transition={{ delay: 1, duration: 0.8 }}
           >
             <motion.a
-              href="#portfolio"
+              href="#work"
               className="group bg-gradient-to-r from-accent to-accent-light text-primary px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-2 hover:shadow-2xl hover:shadow-accent/50 transition-all duration-300 relative overflow-hidden"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

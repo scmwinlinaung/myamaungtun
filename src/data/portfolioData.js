@@ -47,17 +47,8 @@ export const proposalVideos = [
     title: 'Perfect Moment',
     category: 'Proposal',
     url: 'https://www.facebook.com/share/v/1CGYcn9Wwg/?mibextid=wwXIfr',
-    thumbnail: 'https://images.unsplash.com/photo-1522673607200-1645062cd958?w=800',
+    thumbnail: '/images/IMG_8163.PNG',
     description: 'The perfect moment, forever remembered - heartfelt proposal captured in stunning detail',
-    featured: true
-  },
-  {
-    id: 2,
-    title: 'She Said Yes',
-    category: 'Proposal',
-    url: 'https://www.facebook.com/share/v/1CGYcn9Wwg/?mibextid=wwXIfr',
-    thumbnail: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800',
-    description: 'Emotional proposal film that tells your unique love story',
     featured: true
   }
 ];
@@ -68,17 +59,8 @@ export const artisticVideos = [
     title: 'Creative Vision',
     category: 'Creative',
     url: 'https://vt.tiktok.com/ZSuCRkoof/',
-    thumbnail: 'https://images.unsplash.com/photo-1536240478700-b869070f9279?w=800',
+    thumbnail: '/images/IMG_6994.PNG',
     description: 'Creative visual expression pushing artistic boundaries',
-    featured: true
-  },
-  {
-    id: 2,
-    title: 'Cinematic Art',
-    category: 'Creative',
-    url: 'https://vt.tiktok.com/ZSuCRkoof/',
-    thumbnail: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800',
-    description: 'Experimental storytelling through motion and sound',
     featured: true
   }
 ];
@@ -87,21 +69,21 @@ export const artisticVideos = [
 export const proposalPhotos = [
   {
     id: 1,
-    src: '/images/photo_2569-03-20 13.00.13.jpeg',
+    src: '/images/photo_2024-03-20-13.00.13.jpeg',
     alt: 'Romantic proposal moment',
     category: 'Proposal',
     featured: true
   },
   {
     id: 2,
-    src: '/images/photo_2569-03-20 13.00.17.jpeg',
+    src: '/images/photo_2024-03-20-13.00.17.jpeg',
     alt: 'Proposal celebration',
     category: 'Proposal',
     featured: true
   },
   {
     id: 3,
-    src: '/images/photo_2569-03-20 13.00.36.jpeg',
+    src: '/images/photo_2024-03-20-13.00.36.jpeg',
     alt: 'Engagement shot',
     category: 'Proposal',
     featured: false
@@ -163,7 +145,7 @@ export const artisticPhotos = [
     src: '/images/IMG_8163.PNG',
     alt: 'Filming in progress',
     category: 'Artistic',
-    featured: false
+    featured: true
   },
   {
     id: 9,

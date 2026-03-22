@@ -1,12 +1,7 @@
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import About from './components/About';
-import Portfolio from './components/Portfolio';
-import ProposalVideos from './components/ProposalVideos';
-import ArtisticVideos from './components/ArtisticVideos';
-import Gallery from './components/Gallery';
-import ProposalPhotos from './components/ProposalPhotos';
-import ArtisticPhotos from './components/ArtisticPhotos';
+import Work from './components/Work';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -16,12 +11,7 @@ function App() {
       <Navigation />
       <Hero />
       <About />
-      <Portfolio />
-      <ProposalVideos />
-      <ArtisticVideos />
-      <Gallery />
-      <ProposalPhotos />
-      <ArtisticPhotos />
+      <Work />
       <Contact />
       <Footer />
     </div>

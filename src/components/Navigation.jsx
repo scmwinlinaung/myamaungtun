@@ -17,12 +17,7 @@ const Navigation = () => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Proposal Videos', href: '#proposal-videos' },
-    { name: 'Artistic Videos', href: '#artistic-videos' },
-    { name: 'Gallery', href: '#gallery' },
-    { name: 'Proposal Photos', href: '#proposal-photos' },
-    { name: 'Artistic Photos', href: '#artistic-photos' },
+    { name: 'Work', href: '#work' },
     { name: 'Contact', href: '#contact' }
   ];
 
