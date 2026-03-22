@@ -37,6 +37,16 @@ jobs:
         env:
           CI: true
 
+      - name: Verify build output
+        run: |
+          echo "Checking build output..."
+          ls -la dist/
+          if [ ! -f "dist/index.html" ]; then
+            echo "ERROR: dist/index.html not found!"
+            exit 1
+          fi
+          echo "Build output verified successfully!"
+
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
