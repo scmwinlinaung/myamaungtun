@@ -1,0 +1,41 @@
+services:
+  # Production image
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dino-portfolio
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - portfolio-network
+
+  # Development environment (optional)
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: dino-portfolio-dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
+    networks:
+      - portfolio-network
+    profiles:
+      - dev
+
+networks:
+  portfolio-network:
+    driver: bridge
