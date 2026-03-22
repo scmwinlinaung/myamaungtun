@@ -6,10 +6,13 @@ export default defineConfig({
   base: '/',
   server: {
     port: 3000,
-    open: true
+    open: true,
+    headers: {
+      'Content-Type': 'text/javascript'
+    }
   },
   build: {
     outDir: 'dist',
-    sourcemap: true
+    sourcemap: false
   }
 });
