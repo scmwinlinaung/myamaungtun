@@ -1,8 +1,11 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FaPlay, FaHeart, FaRing } from 'react-icons/fa';
 import { proposalVideos } from '../data/portfolioData';
+import VideoEmbed from './VideoEmbed';
 
 const ProposalVideos = () => {
+  const [selectedVideo, setSelectedVideo] = useState(null);
   return (
     <section id="proposal-videos" className="py-20 lg:py-32 bg-gradient-to-b from-primary via-pink-950/10 to-primary relative overflow-hidden">
       {/* Animated Background Elements */}
@@ -121,10 +124,8 @@ const ProposalVideos = () => {
                 className="absolute inset-0 flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
               >
-                <motion.a
-                  href={proposalVideos[0]?.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <motion.button
+                  onClick={() => setSelectedVideo(proposalVideos[0])}
                   className="relative group/play"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
@@ -135,7 +136,7 @@ const ProposalVideos = () => {
                   <div className="relative bg-gradient-to-r from-pink-500 to-red-500 text-white w-24 h-24 rounded-full flex items-center justify-center shadow-2xl shadow-pink-500/50">
                     <FaPlay className="text-3xl ml-2" />
                   </div>
-                </motion.a>
+                </motion.button>
               </motion.div>
 
               {/* Content */}
@@ -188,10 +189,8 @@ const ProposalVideos = () => {
                 <motion.div
                   className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 >
-                  <motion.a
-                    href={video.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <motion.button
+                    onClick={() => setSelectedVideo(video)}
                     className="relative"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
@@ -200,7 +199,7 @@ const ProposalVideos = () => {
                     <div className="relative bg-gradient-to-r from-pink-500 to-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center">
                       <FaPlay className="text-xl ml-1" />
                     </div>
-                  </motion.a>
+                  </motion.button>
                 </motion.div>
               </div>
 
@@ -235,6 +234,18 @@ const ProposalVideos = () => {
             <span>Create Your Perfect Proposal</span>
           </motion.a>
         </motion.div>
+
+        {/* Video Embed Modal */}
+        <AnimatePresence>
+          {selectedVideo && (
+            <VideoEmbed
+              url={selectedVideo.url}
+              thumbnail={selectedVideo.thumbnail}
+              title={selectedVideo.title}
+              onClose={() => setSelectedVideo(null)}
+            />
+          )}
+        </AnimatePresence>
       </div>
 
       <style>{`

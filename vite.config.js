@@ -5,11 +5,8 @@ export default defineConfig({
   plugins: [react()],
   base: '/',
   server: {
-    port: 3000,
-    open: true,
-    headers: {
-      'Content-Type': 'text/javascript'
-    }
+    port: 4000,
+    open: true
   },
   build: {
     outDir: 'dist',

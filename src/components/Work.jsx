@@ -9,6 +9,71 @@ import {
   artisticPhotos
 } from '../data/portfolioData';
 
+// Helper component to embed video directly without modal
+const VideoEmbedContent = ({ url, title }) => {
+  const isYouTube = url.includes('youtube.com') || url.includes('youtu.be');
+  const isTikTok = url.includes('tiktok.com');
+  const isFacebook = url.includes('facebook.com') || url.includes('fb.watch');
+
+  const getEmbedUrl = (url) => {
+    if (isYouTube) {
+      let videoId = '';
+      if (url.includes('youtu.be/')) {
+        videoId = url.split('youtu.be/')[1]?.split('?')[0];
+      } else if (url.includes('youtube.com/watch')) {
+        const urlParams = new URLSearchParams(url.split('?')[1]);
+        videoId = urlParams.get('v');
+      } else if (url.includes('youtube.com/shorts/')) {
+        videoId = url.split('youtube.com/shorts/')[1]?.split('?')[0];
+      }
+      if (videoId) {
+        return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+      }
+    }
+    return url;
+  };
+
+  const embedUrl = getEmbedUrl(url);
+
+  if (isYouTube) {
+    return (
+      <iframe
+        src={embedUrl}
+        title={title}
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none' }}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    );
+  }
+
+  if (isFacebook) {
+    return (
+      <iframe
+        src={`https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(url)}&show_text=false`}
+        title={title}
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none', overflow: 'hidden' }}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    );
+  }
+
+  // For TikTok or unsupported platforms, show a link
+  return (
+    <div className="absolute inset-0 flex items-center justify-center bg-gray-900">
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-accent text-primary px-6 py-3 rounded-lg font-semibold hover:bg-accent-light transition-all"
+      >
+        Watch on TikTok
+      </a>
+    </div>
+  );
+};
+
 const Work = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedMedia, setSelectedMedia] = useState(null);
@@ -281,7 +346,7 @@ const Work = () => {
 
             {/* Content */}
             <motion.div
-              className="relative max-w-5xl max-h-[85vh] px-4"
+              className="relative max-w-7xl max-h-[85vh] px-4"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
@@ -289,23 +354,9 @@ const Work = () => {
               onClick={(e) => e.stopPropagation()}
             >
               {selectedMedia.type === 'video' ? (
-                <div className="bg-black rounded-lg overflow-hidden">
-                  <div className="aspect-video flex items-center justify-center">
-                    <a
-                      href={selectedMedia.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex flex-col items-center gap-4"
-                    >
-                      <img
-                        src={selectedMedia.thumbnail}
-                        alt={selectedMedia.title}
-                        className="max-w-full max-h-[60vh] object-contain rounded-lg"
-                      />
-                      <button className="bg-accent text-primary px-8 py-3 rounded-full font-semibold hover:bg-accent-light transition-colors flex items-center gap-2">
-                        <FaPlay /> Watch Video
-                      </button>
-                    </a>
+                <div className="bg-black rounded-lg overflow-hidden w-full" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                  <div style={{ paddingBottom: '56.25%', position: 'relative' }}>
+                    <VideoEmbedContent url={selectedMedia.url} title={selectedMedia.title} />
                   </div>
                 </div>
               ) : (

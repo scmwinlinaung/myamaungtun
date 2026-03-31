@@ -3,24 +3,24 @@ export const portfolioVideos = [
     id: 1,
     title: 'Wedding Highlight',
     category: 'Wedding',
-    url: 'https://www.facebook.com/share/v/18AskMM3Bo/?mibextid=wwXIfr',
-    thumbnail: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800',
+    url: 'https://youtu.be/OpThdHjsOrs?si=F0PAZo_N8ZguGGrY',
+    thumbnail: '/images/IMG_8751.PNG',
     description: 'Capturing beautiful moments of love and celebration'
   },
   {
     id: 3,
     title: 'PCA Event',
     category: 'Event',
-    url: 'https://www.facebook.com/share/v/17jmE1rf93/?mibextid=wwXIfr',
-    thumbnail: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800',
+    url: 'https://youtu.be/7YB3hm_0X5Y?si=PX1NDpyemS__12hq',
+    thumbnail: '/images/IMG_6992.PNG',
     description: 'Professional event coverage'
   },
   {
     id: 4,
     title: 'Street Triple',
     category: 'Automotive',
-    url: 'https://www.facebook.com/share/r/1AmEdEnewb/?mibextid=wwXIfr',
-    thumbnail: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=800',
+    url: 'https://youtube.com/shorts/urx3H4sa3Nw?si=Tom9xyPGzXqbQAk8',
+    thumbnail: '/images/IMG_6991.PNG',
     description: 'Dynamic motorcycle cinematography'
   },
   {
@@ -28,15 +28,15 @@ export const portfolioVideos = [
     title: 'Nexzter Bric',
     category: 'Automotive',
     url: 'https://www.facebook.com/share/v/18WAGSfUPZ/?mibextid=wwXIfr',
-    thumbnail: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800',
+    thumbnail: '/images/IMG_6996.PNG',
     description: 'Premium automotive showcase'
   },
   {
     id: 6,
-    title: 'New Chapter',
+    title: 'Personal Blog',
     category: 'Short Film',
-    url: 'https://www.facebook.com/share/v/15gqwY8KidY/?mibextid=wwXIfr',
-    thumbnail: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800',
+    url: 'https://youtu.be/dCpo25WsvtM?si=jv2Pkkbm9-al5_rB',
+    thumbnail: '/images/photo_2024-03-20-13.00.13.jpeg',
     description: 'Narrative storytelling at its finest'
   }
 ];
@@ -46,7 +46,7 @@ export const proposalVideos = [
     id: 1,
     title: 'Perfect Moment',
     category: 'Proposal',
-    url: 'https://www.facebook.com/share/v/1CGYcn9Wwg/?mibextid=wwXIfr',
+    url: 'https://youtu.be/QOfFGd3RnXc?si=JMx6yVS68iVhYi2F',
     thumbnail: '/images/IMG_8163.PNG',
     description: 'The perfect moment, forever remembered - heartfelt proposal captured in stunning detail',
     featured: true
@@ -199,3 +199,4 @@ export const services = [
     description: 'Expert editing in DaVinci Resolve with attention to detail and pacing.'
   }
 ];
+

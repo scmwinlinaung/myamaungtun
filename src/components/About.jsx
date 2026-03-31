@@ -33,6 +33,26 @@ const About = () => {
             <h3 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
               Dino Mg
             </h3>
+
+            {/* Profile Photo */}
+            <motion.div
+              className="mb-6"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <div className="relative w-48 h-48 mx-auto lg:mx-0 rounded-2xl overflow-hidden border-4 border-accent/30 shadow-2xl shadow-accent/20">
+                <img
+                  src="/images/dino-mg-profile.jpg"
+                  alt="Dino Mg - Portfolio Owner"
+                  className="w-full h-full object-cover"
+                />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-accent/10 to-transparent pointer-events-none" />
+              </div>
+            </motion.div>
+
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
               Dino Atelier is where creativity meets reality. As a lifestyle enthusiast and a storyteller, I capture the essence of everyday life through my lens. My work reflects the beauty of simplicity and the authenticity of human experiences.
             </p>

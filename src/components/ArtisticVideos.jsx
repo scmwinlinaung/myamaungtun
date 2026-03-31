@@ -1,8 +1,11 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FaPlay, FaPalette, FaMagic, FaStar } from 'react-icons/fa';
 import { artisticVideos } from '../data/portfolioData';
+import VideoEmbed from './VideoEmbed';
 
 const ArtisticVideos = () => {
+  const [selectedVideo, setSelectedVideo] = useState(null);
   return (
     <section id="artistic-videos" className="py-20 lg:py-32 bg-gradient-to-b from-primary via-violet-950/10 to-primary relative overflow-hidden">
       {/* Animated Background Elements */}
@@ -172,10 +175,8 @@ const ArtisticVideos = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                 >
-                  <motion.a
-                    href={video.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <motion.button
+                    onClick={() => setSelectedVideo(video)}
                     className="relative group/play"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
@@ -195,7 +196,7 @@ const ArtisticVideos = () => {
                     <div className="relative bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white w-24 h-24 rounded-full flex items-center justify-center shadow-2xl shadow-violet-500/50">
                       <FaPlay className="text-3xl ml-2" />
                     </div>
-                  </motion.a>
+                  </motion.button>
                 </motion.div>
 
                 {/* Content */}
@@ -269,6 +270,18 @@ const ArtisticVideos = () => {
             <span>Bring Your Vision to Life</span>
           </motion.a>
         </motion.div>
+
+        {/* Video Embed Modal */}
+        <AnimatePresence>
+          {selectedVideo && (
+            <VideoEmbed
+              url={selectedVideo.url}
+              thumbnail={selectedVideo.thumbnail}
+              title={selectedVideo.title}
+              onClose={() => setSelectedVideo(null)}
+            />
+          )}
+        </AnimatePresence>
       </div>
 
       <style>{`
