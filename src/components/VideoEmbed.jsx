@@ -61,7 +61,7 @@ const VideoEmbed = ({ url, thumbnail, title, onClose }) => {
         </button>
 
         {/* Video Container */}
-        <div className="bg-black rounded-2xl overflow-hidden shadow-2xl" style={{ width: '100%', maxWidth: '100%', margin: '0 auto' }}>
+        <div className="bg-black rounded-2xl overflow-hidden shadow-2xl" style={{ width: '100%', margin: '0 auto' }}>
           {isYouTube && (
             <div style={{ position: 'relative', width: '100%', }}>
               {isLoading && (

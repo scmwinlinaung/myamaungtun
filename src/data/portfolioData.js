@@ -25,11 +25,11 @@ export const portfolioVideos = [
   },
   {
     id: 5,
-    title: 'Nexzter Bric',
-    category: 'Automotive',
-    url: 'https://www.facebook.com/share/v/18WAGSfUPZ/?mibextid=wwXIfr',
-    thumbnail: '/images/IMG_6996.PNG',
-    description: 'Premium automotive showcase'
+    title: 'Show Reel',
+    category: 'Reel',
+    url: 'https://youtu.be/ncMI0SHfjyI?si=FrIFOGfpMCDtuUHb',
+    thumbnail: '/images/photo_2569-04-01 13.05.33.jpeg',
+    description: 'Show Reel'
   },
   {
     id: 6,
@@ -53,113 +53,113 @@ export const proposalVideos = [
   }
 ];
 
-export const artisticVideos = [
-  {
-    id: 1,
-    title: 'Creative Vision',
-    category: 'Creative',
-    url: 'https://vt.tiktok.com/ZSuCRkoof/',
-    thumbnail: '/images/IMG_6994.PNG',
-    description: 'Creative visual expression pushing artistic boundaries',
-    featured: true
-  }
-];
+// export const artisticVideos = [
+//   {
+//     id: 1,
+//     title: 'Creative Vision',
+//     category: 'Creative',
+//     url: 'https://vt.tiktok.com/ZSuCRkoof/',
+//     thumbnail: '/images/IMG_6994.PNG',
+//     description: 'Creative visual expression pushing artistic boundaries',
+//     featured: true
+//   }
+// ];
 
-// Separate galleries for different categories
-export const proposalPhotos = [
-  {
-    id: 1,
-    src: '/images/photo_2024-03-20-13.00.13.jpeg',
-    alt: 'Romantic proposal moment',
-    category: 'Proposal',
-    featured: true
-  },
-  {
-    id: 2,
-    src: '/images/photo_2024-03-20-13.00.17.jpeg',
-    alt: 'Proposal celebration',
-    category: 'Proposal',
-    featured: true
-  },
-  {
-    id: 3,
-    src: '/images/photo_2024-03-20-13.00.36.jpeg',
-    alt: 'Engagement shot',
-    category: 'Proposal',
-    featured: false
-  }
-];
+// // Separate galleries for different categories
+// export const proposalPhotos = [
+//   {
+//     id: 1,
+//     src: '/images/photo_2024-03-20-13.00.13.jpeg',
+//     alt: 'Romantic proposal moment',
+//     category: 'Proposal',
+//     featured: true
+//   },
+//   {
+//     id: 2,
+//     src: '/images/photo_2024-03-20-13.00.17.jpeg',
+//     alt: 'Proposal celebration',
+//     category: 'Proposal',
+//     featured: true
+//   },
+//   {
+//     id: 3,
+//     src: '/images/photo_2024-03-20-13.00.36.jpeg',
+//     alt: 'Engagement shot',
+//     category: 'Proposal',
+//     featured: false
+//   }
+// ];
 
-export const artisticPhotos = [
-  {
-    id: 1,
-    src: '/images/IMG_4628.PNG',
-    alt: 'Behind the scenes shot',
-    category: 'BTS',
-    featured: true
-  },
-  {
-    id: 2,
-    src: '/images/IMG_6904.PNG',
-    alt: 'Production setup',
-    category: 'BTS',
-    featured: false
-  },
-  {
-    id: 3,
-    src: '/images/IMG_6991.PNG',
-    alt: 'Camera work',
-    category: 'BTS',
-    featured: false
-  },
-  {
-    id: 4,
-    src: '/images/IMG_6992.PNG',
-    alt: 'On location filming',
-    category: 'BTS',
-    featured: false
-  },
-  {
-    id: 5,
-    src: '/images/IMG_6994.PNG',
-    alt: 'Equipment setup',
-    category: 'BTS',
-    featured: false
-  },
-  {
-    id: 6,
-    src: '/images/IMG_6996.PNG',
-    alt: 'Production still',
-    category: 'Artistic',
-    featured: true
-  },
-  {
-    id: 7,
-    src: '/images/IMG_6997.JPG',
-    alt: 'Cinematic shot',
-    category: 'Artistic',
-    featured: true
-  },
-  {
-    id: 8,
-    src: '/images/IMG_8163.PNG',
-    alt: 'Filming in progress',
-    category: 'Artistic',
-    featured: true
-  },
-  {
-    id: 9,
-    src: '/images/IMG_8751.PNG',
-    alt: 'Studio work',
-    category: 'Artistic',
-    featured: false
-  }
-];
+// export const artisticPhotos = [
+//   {
+//     id: 1,
+//     src: '/images/IMG_4628.PNG',
+//     alt: 'Behind the scenes shot',
+//     category: 'BTS',
+//     featured: true
+//   },
+//   {
+//     id: 2,
+//     src: '/images/IMG_6904.PNG',
+//     alt: 'Production setup',
+//     category: 'BTS',
+//     featured: false
+//   },
+//   {
+//     id: 3,
+//     src: '/images/IMG_6991.PNG',
+//     alt: 'Camera work',
+//     category: 'BTS',
+//     featured: false
+//   },
+//   {
+//     id: 4,
+//     src: '/images/IMG_6992.PNG',
+//     alt: 'On location filming',
+//     category: 'BTS',
+//     featured: false
+//   },
+//   {
+//     id: 5,
+//     src: '/images/IMG_6994.PNG',
+//     alt: 'Equipment setup',
+//     category: 'BTS',
+//     featured: false
+//   },
+//   {
+//     id: 6,
+//     src: '/images/IMG_6996.PNG',
+//     alt: 'Production still',
+//     category: 'Artistic',
+//     featured: true
+//   },
+//   {
+//     id: 7,
+//     src: '/images/IMG_6997.JPG',
+//     alt: 'Cinematic shot',
+//     category: 'Artistic',
+//     featured: true
+//   },
+//   {
+//     id: 8,
+//     src: '/images/IMG_8163.PNG',
+//     alt: 'Filming in progress',
+//     category: 'Artistic',
+//     featured: true
+//   },
+//   {
+//     id: 9,
+//     src: '/images/IMG_8751.PNG',
+//     alt: 'Studio work',
+//     category: 'Artistic',
+//     featured: false
+//   }
+// ];
 
-export const galleryImages = [
-  ...proposalPhotos,
-  ...artisticPhotos
-];
+// export const galleryImages = [
+//   ...proposalPhotos,
+//   ...artisticPhotos
+// ];
 
 export const socialLinks = {
   instagram: 'https://www.instagram.com/ddinonick?igsh=djVyNjh5MWZ4N281',

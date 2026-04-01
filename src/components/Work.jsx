@@ -4,9 +4,9 @@ import { FaPlay, FaExpand, FaHeart, FaCamera, FaVideo } from 'react-icons/fa';
 import {
   portfolioVideos,
   proposalVideos,
-  artisticVideos,
-  proposalPhotos,
-  artisticPhotos
+  // artisticVideos,
+  // proposalPhotos,
+  // artisticPhotos
 } from '../data/portfolioData';
 
 // Helper component to embed video directly without modal
@@ -80,15 +80,15 @@ const Work = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [filterType, setFilterType] = useState('all'); // 'all', 'videos', 'photos'
 
-  const categories = ['All', 'Proposal', 'Artistic', 'Automotive', 'Event', 'Wedding'];
+  const categories = ['All', 'Proposal', 'Automotive', 'Event', 'Wedding'];
 
   // Combine all media
   const allMedia = [
     ...portfolioVideos.map(item => ({ ...item, type: 'video' })),
     ...proposalVideos.map(item => ({ ...item, type: 'video' })),
-    ...artisticVideos.map(item => ({ ...item, type: 'video' })),
-    ...proposalPhotos.map(item => ({ ...item, type: 'photo' })),
-    ...artisticPhotos.map(item => ({ ...item, type: 'photo' }))
+    // ...artisticVideos.map(item => ({ ...item, type: 'video' })),
+    // ...proposalPhotos.map(item => ({ ...item, type: 'photo' })),
+    // ...artisticPhotos.map(item => ({ ...item, type: 'photo' }))
   ];
 
   // Filter media by category and type
@@ -141,64 +141,7 @@ const Work = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Section Header */}
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
-                Selected Work
-              </span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-accent to-accent-light mx-auto mb-8 rounded-full"></div>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              A curated collection of videos and photography
-            </p>
-          </motion.div>
 
-          {/* Type Filter - Video/Photo/All */}
-          <motion.div
-            className="flex justify-center gap-4 mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <button
-              onClick={() => setFilterType('all')}
-              className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 ${
-                filterType === 'all'
-                  ? 'bg-accent text-primary shadow-lg shadow-accent/25'
-                  : 'bg-secondary text-gray-300 hover:bg-gray-700'
-              }`}
-            >
-              All
-            </button>
-            <button
-              onClick={() => setFilterType('videos')}
-              className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
-                filterType === 'videos'
-                  ? 'bg-accent text-primary shadow-lg shadow-accent/25'
-                  : 'bg-secondary text-gray-300 hover:bg-gray-700'
-              }`}
-            >
-              <FaVideo /> Videos
-            </button>
-            <button
-              onClick={() => setFilterType('photos')}
-              className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
-                filterType === 'photos'
-                  ? 'bg-accent text-primary shadow-lg shadow-accent/25'
-                  : 'bg-secondary text-gray-300 hover:bg-gray-700'
-              }`}
-            >
-              <FaCamera /> Photos
-            </button>
-          </motion.div>
 
           {/* Category Filter */}
           <motion.div
@@ -212,11 +155,10 @@ const Work = () => {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'bg-accent text-primary shadow-lg shadow-accent/25'
-                    : 'bg-secondary/50 text-gray-300 hover:bg-secondary border border-gray-700'
-                }`}
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category
+                  ? 'bg-accent text-primary shadow-lg shadow-accent/25'
+                  : 'bg-secondary/50 text-gray-300 hover:bg-secondary border border-gray-700'
+                  }`}
               >
                 {category}
               </button>
