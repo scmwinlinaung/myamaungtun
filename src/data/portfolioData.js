@@ -1,6 +1,14 @@
 export const portfolioVideos = [
   {
     id: 1,
+    title: 'Show Reel',
+    category: 'Reel',
+    url: 'https://youtu.be/ncMI0SHfjyI?si=FrIFOGfpMCDtuUHb',
+    thumbnail: '/images/photo_2569-04-01 16.05.36.jpeg',
+    description: 'Show Reel'
+  },
+  {
+    id: 2,
     title: 'Wedding Highlight',
     category: 'Wedding',
     url: 'https://youtu.be/OpThdHjsOrs?si=F0PAZo_N8ZguGGrY',
@@ -23,20 +31,13 @@ export const portfolioVideos = [
     thumbnail: '/images/IMG_6991.PNG',
     description: 'Dynamic motorcycle cinematography'
   },
+
   {
     id: 5,
-    title: 'Show Reel',
-    category: 'Reel',
-    url: 'https://youtu.be/ncMI0SHfjyI?si=FrIFOGfpMCDtuUHb',
-    thumbnail: '/images/photo_2569-04-01 13.05.33.jpeg',
-    description: 'Show Reel'
-  },
-  {
-    id: 6,
     title: 'Personal Blog',
     category: 'Short Film',
     url: 'https://youtu.be/dCpo25WsvtM?si=jv2Pkkbm9-al5_rB',
-    thumbnail: '/images/photo_2024-03-20-13.00.13.jpeg',
+    thumbnail: '/images/IMG_6997.JPG',
     description: 'Narrative storytelling at its finest'
   }
 ];
