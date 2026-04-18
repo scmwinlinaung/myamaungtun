@@ -39,6 +39,13 @@ export const portfolioVideos = [
     url: 'https://youtu.be/dCpo25WsvtM?si=jv2Pkkbm9-al5_rB',
     thumbnail: '/images/IMG_6997.JPG',
     description: 'Narrative storytelling at its finest'
+  }, {
+    id: 6,
+    title: "Coffee Bean Commercial",
+    category: 'Coffee Bean',
+    url: "https://youtube.com/shorts/8tneePqKDS4?si=WFbXwcSF980mwUga",
+    thumbnail: '/images/coffee_bean.jpeg',
+    description: "",
   }
 ];
 
